@@ -7,4 +7,6 @@ angular.module('dutchpayApp')
       'AngularJS',
       'Karma'
     ];
+      
+    'What ever you are';
   });
