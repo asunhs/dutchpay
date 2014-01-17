@@ -1,21 +1,29 @@
 <div ng-include="'partials/navbar'"></div>
 
 <div class="jumbotron">
-  <h1>This is the user view.</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    This is the user view.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>
+    <h1>Login</h1>
+    <p class="lead">
+        This is the user view.
+    </p>
+    <form role="form" ng-submit="login()">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="ID">
+            <input type="password" class="form-control" placeholder="Password">
+            <br>
+            <button type="submit" class="btn btn-lg btn-success" ng-click="#"> Login </button>
+            <button type="buttom" class="btn btn-lg btn-primary" ng-click="#" ng-disabled="true" >Regester</button>
+        </div>
+    </form>
+    
 </div>
 
 <div class="row marketing">
-  <div ng-repeat="thing in awesomeThings">
-      <h4>{{thing.name}}</h4>
-      <p>{{thing.info}}</p>
-  </div>
+    <div ng-repeat="thing in awesomeThings">
+        <h4>{{thing.name}}</h4>
+        <p>{{thing.info}}</p>
+    </div>
 </div>
 
 <div class="footer">
-  <p>♥ from the Yeoman team</p>
+    <p>♥ from the Yeoman team</p>
 </div>
