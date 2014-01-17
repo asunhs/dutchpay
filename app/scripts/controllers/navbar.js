@@ -7,8 +7,8 @@ angular.module('dutchpayApp').controller('NavbarCtrl', function ($scope, $locati
             'link': '/main'
         },
         {
-            'title': 'login',
-            'link': '/login'
+            'title': 'Login',
+            'link': '/user'
         }
     ];
     
