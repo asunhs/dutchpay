@@ -8,17 +8,18 @@ angular.module('dutchpayApp', [
 ]).
 config(function ($routeProvider, $locationProvider) {
     $routeProvider.
-    when('/', {
+    when('/main', {
         templateUrl: 'partials/main',
         controller: 'MainCtrl'
     }).
-    when('/user', {
-        templateUrl: 'user.html',
+    when('/login', {
+        templateUrl: 'partials/user',
         controller: 'UserCtrl'
     }).
     otherwise({
-        redirectTo: '/'
+        redirectTo: '/main'
     });
+    
     
     $locationProvider.html5Mode(true);
 });

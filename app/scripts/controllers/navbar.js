@@ -4,11 +4,11 @@ angular.module('dutchpayApp').controller('NavbarCtrl', function ($scope, $locati
     $scope.menu = [
         {
             'title': 'Home',
-            'link': '/'
+            'link': '/main'
         },
         {
             'title': 'login',
-            'link': '#/user'
+            'link': '/login'
         }
     ];
     
