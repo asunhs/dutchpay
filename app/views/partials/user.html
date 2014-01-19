@@ -5,19 +5,30 @@
 </div>
 
 <div class="row marketing">
-    <form role="form" ng-submit="login()">
+    <form role="form" ng-submit="submit()">
         <div class="form-group">
-            <input type="text" ng-model="id" class="form-control" placeholder="e-mail">
+            <input type="text" ng-model="id" class="form-control" placeholder="e-mail" required>
+        </div>
+        <div class="form-group" ng-model="nick" ng-show="!!regMode">
+            <input type="text" class="form-control" placeholder="your nick" ng-required="!!regMode" >
         </div>
         <div class="form-group">
-            <input type="password" ng-model="password" class="form-control" placeholder="password">
+            <input type="password" ng-model="password" class="form-control" placeholder="password" required>
         </div>
-        <div class="row">
+        <div class="form-group" ng-show="!!regMode">
+            <input type="password" ng-model="confirm" class="form-control" placeholder="confirm password" ng-required="!!regMode" >
+        </div>
+        <div class="row" ng-show="!regMode">
             <div class="col-md-6 col-sm-6 col-xs-6">
-                <button type="buttom" class="btn btn-block btn-primary" ng-disabled="true" >Regester</button>
+                <button type="submit" class="btn btn-block btn-success">Login</button>
             </div>
             <div class="col-md-6 col-sm-6 col-xs-6">
-                <button type="submit" class="btn btn-block btn-success"> Login </button>
+                <button type="buttom" class="btn btn-block btn-primary" ng-click="resgierMode()" >Regester</button>
+            </div>
+        </div>
+        <div class="row" ng-show="!!regMode">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <button type="submit" class="btn btn-block btn-primary">Regester</button>
             </div>
         </div>
     </form>
