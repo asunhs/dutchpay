@@ -10,7 +10,11 @@ angular.module('dutchpayApp').factory('UserService', function ($http) {
                 throw new Error("empty user");
             }
             
-            $http.post('/api/user/login', { id : user.id, password : user.password }).error(function(xhr, data) {
+            $http.post('/api/user/login', { id : user.id, password : user.password }).
+            success(function(data) {
+                console.log(data);
+            }).
+            error(function(xhr, data) {
                 console.log(data);
                 alert('error');
             });
@@ -21,8 +25,11 @@ angular.module('dutchpayApp').factory('UserService', function ($http) {
                 throw new Error("empty user");
             }
             
-            $http.post('/api/user/register', { id : user.id, nick : user.nick, password : user.password })
-            .error(function(xhr, data) {
+            $http.post('/api/user/register', { id : user.id, nick : user.nick, password : user.password }).
+            success(function(data) {
+                console.log(data);
+            }).
+            error(function(xhr, data) {
                 console.log(data);
                 alert('error');
             });
