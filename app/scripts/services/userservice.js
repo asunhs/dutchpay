@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('dutchpayApp').factory('UserService', function ($http) {
+angular.module('dutchpayApp').factory('UserService', function ($http, UserModel) {
 
     // Method for instantiating
     return {
@@ -12,7 +12,9 @@ angular.module('dutchpayApp').factory('UserService', function ($http) {
             
             $http.post('/api/user/login', { id : user.id, password : user.password }).
             success(function(data) {
-                console.log(data);
+                UserModel.set(data);
+                
+                console.log(UserModel);
             }).
             error(function(xhr, data) {
                 console.log(data);
@@ -27,7 +29,9 @@ angular.module('dutchpayApp').factory('UserService', function ($http) {
             
             $http.post('/api/user/register', { id : user.id, nick : user.nick, password : user.password }).
             success(function(data) {
-                console.log(data);
+                UserModel.set(data);
+                
+                console.log(UserModel);
             }).
             error(function(xhr, data) {
                 console.log(data);
