@@ -12,7 +12,7 @@ config(function ($routeProvider, $locationProvider) {
         templateUrl: 'partials/main',
         controller: 'MainCtrl'
     }).
-    when('/user', {
+    when('/user/:action', {
         templateUrl: 'partials/user',
         controller: 'UserCtrl'
     }).
