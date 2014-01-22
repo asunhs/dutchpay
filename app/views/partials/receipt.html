@@ -1,0 +1,18 @@
+<div ng-include="'partials/navbar'"></div>
+
+<div class="jumbotron">
+    <h1>New Receipt</h1>
+</div>
+
+<div class="row">
+    <form name="searchUserForm" ng-submit="searchUser()">
+        <div class="input-group">
+            <input type="text" class="form-control" ng-model="search.name" placeholder="Search by nickname">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+            </span>
+        </div>
+    </form>
+</div>
+
+<div class="footer"></div>

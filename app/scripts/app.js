@@ -16,6 +16,14 @@ config(function ($routeProvider, $locationProvider) {
         templateUrl: 'partials/user',
         controller: 'UserCtrl'
     }).
+    when('/receipts', {
+        templateUrl: 'partials/receipts',
+        controller: 'ReceiptsCtrl'
+    }).
+    when('/receipts/new', {
+        templateUrl: 'partials/receipt',
+        controller: 'ReceiptCtrl'
+    }).
     otherwise({
         redirectTo: '/main'
     });

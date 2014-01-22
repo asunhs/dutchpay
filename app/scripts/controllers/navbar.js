@@ -10,6 +10,10 @@ angular.module('dutchpayApp').controller('NavbarCtrl', function ($scope, $locati
                     'link': '/main'
                 },
                 {
+                    'title' : 'Receipts',
+                    'link' : '/receipts'
+                },
+                {
                     'title': 'Logout',
                     'link': '/user/logout'
                 }
